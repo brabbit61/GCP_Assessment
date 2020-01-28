@@ -1,0 +1,29 @@
+GCP, VPC Assignment 
+Date: 24-01-2020
+Name: Jenit Jain
+
+Q1-2) Create an instance A in default VPC. Launch instance B with only private IP in default VPC in different zone.
+Ans)
+    1) Click on Create in the Compute Engine console under the VM instances option in the menu on the left.
+    2) Give a name to the instance.
+    3) Select the region and zone.
+    4) Select the machine type as F1 Micro.
+    5) Select the required Firewall rules that apply.
+    6) Select the Networking option and select the required VPC and subnet to launch the instances in. For Instance B, select the external IP to be None hence making it a private Instance.
+    7) Click on Create to launch the instance.
+
+Q3) Configure NAT so instance can access Internet.
+Ans)
+    1) Go to Cloud NAT and click on Get Started.
+    2) Give the gateway name.
+    3) Select the default VPC network.
+    4) Specify the region.
+    5) Create a router under the Cloud Router option.
+    6) In NAT Mapping select “Primary ranges for all subnets” since primary ranges are for all instances created in the Compute Engine.
+    7) Click on Create.
+
+Q4: SSH into Instance B using instance A and try to install nginx.
+Ans:
+    1) Open SSH Terminal of public instance using the SSH button provided  next to the name of the instance.
+    2) Type ssh private-instance-name (we’re in the ssh terminal of private instance now).
+    3) Type apt-get install nginx -y
